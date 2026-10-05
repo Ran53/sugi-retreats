@@ -8,3 +8,11 @@ Place your photos here with these exact names:
 - favicon.png (optional)
 
 Until you add them, the site uses beautiful Unsplash fallback images.
+
+echo "# sugi-retreats" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Ran53/sugi-retreats.git
+git push -u origin main
