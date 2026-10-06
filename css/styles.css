@@ -1,17 +1,17 @@
 /* =====================================================
-   SUGI RETREATS - Main Stylesheet (Fixed)
+   SUGI RETREATS - Main Stylesheet (Fully Fixed)
    ===================================================== */
 
 :root {
   /* Colors tuned to match logo (#0F0F0F dark tone + tropical palm green) */
-  --color-primary: #1A3C27;        /* Deep botanical green */
-  --color-primary-dark: #0D2115;   /* Dark forest shade */
+  --color-primary: #1A3C27;
+  --color-primary-dark: #0D2115;
   --color-primary-light: #2A5C3D;
-  --color-accent: #7EA172;         /* Fresh palm leaf green */
+  --color-accent: #7EA172;
   --color-accent-dark: #5B7A51;
-  --color-dark-bg: #111412;       /* Near-black to blend dark logo background */
-  --color-bg: #F8F6F1;             /* Soft organic cream */
-  --color-bg-alt: #EEF4EF;         /* Subtle green-cream tint */
+  --color-dark-bg: #111412;
+  --color-bg: #F8F6F1;
+  --color-bg-alt: #EEF4EF;
   --color-text: #222523;
   --color-text-light: #5A625C;
   --color-white: #FFFFFF;
@@ -80,20 +80,20 @@ ul {
 .brand-logo {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.9rem;
   flex-shrink: 0;
 }
 
 .nav-logo-img {
-  width: 70px;
-  height: 70px;
-  border-radius: 50%;
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;scale: 3;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
 
 .brand-logo:hover .nav-logo-img {
-  transform: scale(1.08);
+  transform: scale(1.25);
 }
 
 .logo-text-group {
@@ -104,17 +104,17 @@ ul {
 
 .logo-text {
   font-family: var(--font-heading);
-  font-size: 1.7rem;
+  font-size: 2.05rem;
   font-weight: 700;
   color: var(--color-primary);
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
 }
 
 .logo-sub {
-  font-size: 0.7rem;
+  font-size: 0.82rem;
   font-weight: 600;
   color: var(--color-accent-dark);
-  letter-spacing: 3px;
+  letter-spacing: 3.5px;
 }
 
 .logo-text.light {
@@ -122,8 +122,8 @@ ul {
 }
 
 .footer-logo-img {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   object-fit: cover;
 }
@@ -219,7 +219,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 90px;
+  height: 105px;
   gap: 1rem;
 }
 
@@ -352,7 +352,7 @@ ul {
   letter-spacing: 2px;
 }
 
-/* Fixed flashing "OPENING SOON!" */
+/* Strong mobile-friendly flashing */
 .hero-open {
   font-family: var(--font-heading);
   font-size: clamp(2rem, 10vw, 5.625rem);
@@ -360,28 +360,34 @@ ul {
   margin: 0 0 1rem;
   line-height: 1.1;
   letter-spacing: clamp(1px, 0.5vw, 2px);
-  color: #fff;
-  animation: opening-flash 1s steps(2, start) infinite;
+  color: #ffffff;
   text-shadow: 0 0 18px rgba(255, 255, 255, 0.9);
+  animation: opening-flash 0.9s ease-in-out infinite !important;
+  -webkit-animation: opening-flash 0.9s ease-in-out infinite !important;
+  will-change: opacity, text-shadow;
 }
 
 @keyframes opening-flash {
-  0%, 49% {
+  0%, 100% {
     opacity: 1;
-    visibility: visible;
+    text-shadow: 0 0 20px #fff, 0 0 40px rgba(255,255,255,0.7);
   }
-  50%, 100% {
+  50% {
     opacity: 0.25;
-    visibility: visible;
+    text-shadow: none;
   }
 }
 
-/* @media (prefers-reduced-motion: reduce) {
-  .hero-open {
-    animation: none;
+@-webkit-keyframes opening-flash {
+  0%, 100% {
     opacity: 1;
+    text-shadow: 0 0 20px #fff, 0 0 40px rgba(255,255,255,0.7);
   }
-} */
+  50% {
+    opacity: 0.25;
+    text-shadow: none;
+  }
+}
 
 .hero-subtitle {
   font-size: clamp(1rem, 2.5vw, 1.2rem);
@@ -870,7 +876,7 @@ ul {
 
   .nav {
     position: fixed;
-    top: 90px;
+    top: 105px;
     left: 0;
     right: 0;
     background: var(--color-bg);
@@ -906,31 +912,54 @@ ul {
   }
 
   .header-ctas {
-    display: none; /* hide desktop Call / WhatsApp on mobile */
+    display: none;
+  }
+
+  /* Slightly smaller logo on tablet */
+  .nav-logo-img {
+    width: 72px;
+    height: 72px;
+  }
+
+  .logo-text {
+    font-size: 1.75rem;
+  }
+
+  .logo-sub {
+    font-size: 0.72rem;
+    letter-spacing: 3px;
+  }
+
+  .header-inner {
+    height: 92px;
+  }
+
+  .nav {
+    top: 92px;
   }
 }
 
 @media (max-width: 768px) {
   .nav-logo-img {
-    width: 58px;
-    height: 58px;
+    width: 64px;
+    height: 64px;
   }
 
   .logo-text {
-    font-size: 1.45rem;
+    font-size: 1.55rem;
   }
 
   .logo-sub {
-    font-size: 0.62rem;
+    font-size: 0.65rem;
     letter-spacing: 2.5px;
   }
 
   .header-inner {
-    height: 80px;
+    height: 84px;
   }
 
   .nav {
-    top: 80px;
+    top: 84px;
   }
 
   .about-image img {
@@ -940,25 +969,25 @@ ul {
 
 @media (max-width: 480px) {
   .nav-logo-img {
-    width: 52px;
-    height: 52px;
+    width: 58px;
+    height: 58px;
   }
 
   .logo-text {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 
   .logo-sub {
-    font-size: 0.55rem;
+    font-size: 0.58rem;
     letter-spacing: 2px;
   }
 
   .header-inner {
-    height: 74px;
+    height: 78px;
   }
 
   .nav {
-    top: 74px;
+    top: 78px;
   }
 
   .amenities-grid {
