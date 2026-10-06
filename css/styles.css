@@ -338,6 +338,15 @@ ul {
   letter-spacing: 2px;
 }
 
+.hero-open {
+  font-family: var(--font-heading);
+  font-size: 90px;
+  font-weight: 900;
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  letter-spacing: 2px;
+}
+
 .hero-subtitle {
   font-size: clamp(1rem, 2.5vw, 1.2rem);
   font-weight: 300;
