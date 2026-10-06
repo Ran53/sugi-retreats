@@ -1,0 +1,22 @@
+sugi-retreats/
+│
+├── index.html
+├── css/
+│   └── styles.css
+├── js/
+│   └── main.js
+└── images/
+    ├── logo/
+    │   └── logo.png
+    ├── properties/
+    │   ├── villa-1.jpg
+    │   ├── pool-cottage-1.jpg
+    │   ├── greenery-cottage-1.jpg
+    │   └── dorm-1.jpg
+    ├── amenities/
+    │   ├── pool-jacuzzi.jpg
+    │   └── garden.jpg
+    └── gallery/
+        ├── gallery-1.jpg
+        ├── gallery-2.jpg
+        └── ...
