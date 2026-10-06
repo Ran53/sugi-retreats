@@ -866,7 +866,7 @@ ul {
 }
 
 
-.hero .hero-content h1.hero-open {
+/* .hero .hero-content h1.hero-open {
   display: block !important;
   color: #ffdf00 !important;
   animation: sugi-mobile-flash 0.8s steps(2, start) infinite !important;
@@ -876,4 +876,4 @@ ul {
   to {
     visibility: hidden;
   }
-}
+} */
