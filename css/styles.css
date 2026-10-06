@@ -338,14 +338,35 @@ ul {
   letter-spacing: 2px;
 }
 
+
 .hero-open {
   font-family: var(--font-heading);
-  font-size: 90px;
+  /* font-size: 90px; */
+  font-size: clamp(2.5rem, 8vw, 90px);
   font-weight: 900;
   margin-bottom: 1rem;
   line-height: 1.1;
   letter-spacing: 2px;
+  animation: opening-flash 1.2s ease-in-out infinite;
 }
+
+@keyframes opening-flash {
+  0%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.8);
+  }
+  50% {
+    opacity: 0.35;
+    text-shadow: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-open {
+    animation: none;
+  }
+}
+
 
 .hero-subtitle {
   font-size: clamp(1rem, 2.5vw, 1.2rem);
