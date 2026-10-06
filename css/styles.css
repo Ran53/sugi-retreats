@@ -376,12 +376,12 @@ ul {
   }
 }
 
-@media (prefers-reduced-motion: reduce) {
+/* @media (prefers-reduced-motion: reduce) {
   .hero-open {
     animation: none;
     opacity: 1;
   }
-}
+} */
 
 .hero-subtitle {
   font-size: clamp(1rem, 2.5vw, 1.2rem);
