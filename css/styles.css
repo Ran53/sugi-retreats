@@ -341,12 +341,11 @@ ul {
 
 .hero-open {
   font-family: var(--font-heading);
-  /* font-size: 90px; */
-  font-size: clamp(2.5rem, 8vw, 90px);
+  font-size: clamp(2rem, 10vw, 5.625rem);
   font-weight: 900;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem;
   line-height: 1.1;
-  letter-spacing: 2px;
+  letter-spacing: clamp(1px, 0.5vw, 2px);
   animation: opening-flash 1.2s ease-in-out infinite;
 }
 
@@ -366,6 +365,7 @@ ul {
     animation: none;
   }
 }
+
 
 
 .hero-subtitle {
