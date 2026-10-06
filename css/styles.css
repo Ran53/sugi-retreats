@@ -864,3 +864,16 @@ ul {
     top: 85px;
   }
 }
+
+
+.hero .hero-content h1.hero-open {
+  display: block !important;
+  color: #ffdf00 !important;
+  animation: sugi-mobile-flash 0.8s steps(2, start) infinite !important;
+}
+
+@keyframes sugi-mobile-flash {
+  to {
+    visibility: hidden;
+  }
+}
