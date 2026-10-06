@@ -12,18 +12,35 @@ document.addEventListener('DOMContentLoaded', () => {
   // Mobile Navigation Toggle
   const navToggle = document.getElementById('nav-toggle');
   const nav = document.getElementById('nav');
-  
+
   if (navToggle && nav) {
     navToggle.addEventListener('click', () => {
       nav.classList.toggle('open');
       navToggle.classList.toggle('active');
+      // Prevent body scroll when menu is open
+      document.body.style.overflow = nav.classList.contains('open') ? 'hidden' : '';
     });
 
+    // Close menu when a nav link is clicked
     nav.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', () => {
         nav.classList.remove('open');
         navToggle.classList.remove('active');
+        document.body.style.overflow = '';
       });
+    });
+
+    // Close menu on outside click
+    document.addEventListener('click', (e) => {
+      if (
+        nav.classList.contains('open') &&
+        !nav.contains(e.target) &&
+        !navToggle.contains(e.target)
+      ) {
+        nav.classList.remove('open');
+        navToggle.classList.remove('active');
+        document.body.style.overflow = '';
+      }
     });
   }
 
