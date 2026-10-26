@@ -84,11 +84,15 @@ ul {
   flex-shrink: 0;
 }
 
+
+
 .nav-logo-img {
-  width: 88px;
-  height: 88px;
-  border-radius: 50%;scale: 3;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  /* scale: 1.2; */
   object-fit: cover;
+  display: block;
   transition: transform 0.3s ease;
 }
 
